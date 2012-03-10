@@ -1,27 +1,27 @@
-List the cars (XML Format)
+List the contacts (XML Format)
 ==========================
-curl -v -X GET -H"Accept: application/xml" http://localhost:9080/rest/cars
+curl -v -X GET -H"Accept: application/xml" http://localhost:9080/rest/contacts
 
-List the cars (JSON Format)
+List the contacts (JSON Format)
 ==========================
-curl -v -X GET -H"Accept: application/json" http://localhost:9080/rest/cars
+curl -v -X GET -H"Accept: application/json" http://localhost:9080/rest/contacts
 
-Get a single car in XML Format
+Get a single contacts in XML Format
 ==============================
-curl -H "accept: application/xml" localhost:9080/rest/cars/1
+curl -H "accept: application/xml" localhost:9080/rest/contacts/1
 
-Get a single car in JSON Format
+Get a single contact in JSON Format
 ==============================
-curl -H "accept: application/json" localhost:9080/rest/cars/1
+curl -H "accept: application/json" localhost:9080/rest/contacts/1
 
-Create a new car
+Create a new contact
 ================
-curl -v -X POST --data-binary "<car make=\"kevin\"/>" -H"Content-Type: application/xml" -H"Accept: application/xml" http://localhost:9080/rest/cars/
+curl -v -X POST --data-binary "<contact first_name=\"kevin\"/>" -H"Content-Type: application/xml" -H"Accept: application/xml" http://localhost:9080/rest/contacts/
 
-Update a car
+Update a contact
 ============
-curl -v -X PUT --data-binary "<car id=\"2\" make=\"kevin\" model=\"civic\"/>" -H"Content-Type: application/xml" -H"Accept: application/xml" http://localhost:9080/rest/cars/2
+curl -v -X PUT --data-binary "<contact id=\"2\" first_name=\"kevin\" last_name=\"jones\"/>" -H"Content-Type: application/xml" -H"Accept: application/xml" http://localhost:9080/rest/contacts/2
 
-Delete a car
+Delete a contact
 ============
-curl -v -X DELETE http://localhost:9080/rest/cars/2
+curl -v -X DELETE http://localhost:9080/rest/contacts/2

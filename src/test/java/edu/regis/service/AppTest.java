@@ -48,17 +48,17 @@ public class AppTest
 
             // get the initial representation
 
-            System.out.println("Getting list of cars:");
-            String users = wr.path("cars/").accept("application/json").get(String.class);
-            System.out.println(String.format("List of cars found:\n%s", users.toString()));
+            System.out.println("Getting list of contacts:");
+            String users = wr.path("contacts/").accept("application/json").get(String.class);
+            System.out.println(String.format("List of contacts found:\n%s", users.toString()));
             System.out.println("-----");
 
             // add a new user
 
-            System.out.println("Creating test car:");
-            JSONObject user = new JSONObject();
-            user.put("make", "test").put("model", "blah").put("price", "20000");
-            wr.path("users/30").type("application/json").put(user);
+            System.out.println("Creating test contact:");
+            JSONObject contact = new JSONObject();
+            contact.put("first_name", "My").put("model", "Name").put("email", "email@email.com");
+            wr.path("users/30").type("application/json").put(contact);
             System.out.println("-----");
     }
 }

@@ -31,7 +31,8 @@ public class ContactsResource {
     public Contacts getAll() {
         Contacts contacts = new Contacts();
         contacts.getContacts().addAll(ContactDb.getInstance().getContacts());
-    	return contacts;
+    	System.out.println("Contacts: " + contacts.getContacts());
+        return contacts;
     }
 
     /**
@@ -61,7 +62,6 @@ public class ContactsResource {
      */
     @Path("{contactid}/")
     public ContactResource getContact(@PathParam("contactid") String contactid) {
-        System.out.println("getting here");
         return new ContactResource(contactid);
     }
 }

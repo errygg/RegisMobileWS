@@ -29,6 +29,7 @@ public class ContactDb {
     	name1.setState("NW");
     	name1.setZip(00000);
     	name1.setCell("555-555-5555");
+    	addContact(name1);
 
     }
 
