@@ -1,4 +1,4 @@
-package edu.regis.service.db;
+package edu.regis.ws.db;
 
 import edu.regis.namespaces.contacts.Contact;
 

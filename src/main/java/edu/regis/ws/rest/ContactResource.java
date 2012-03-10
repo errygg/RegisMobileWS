@@ -1,8 +1,8 @@
-package edu.regis.service.rest;
+package edu.regis.ws.rest;
 
 
 import edu.regis.namespaces.contacts.Contact;
-import edu.regis.service.db.ContactDb;
+import edu.regis.ws.db.ContactDb;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
