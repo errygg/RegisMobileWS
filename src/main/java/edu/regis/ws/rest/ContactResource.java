@@ -1,6 +1,5 @@
 package edu.regis.ws.rest;
 
-
 import edu.regis.namespaces.contacts.Contact;
 import edu.regis.ws.db.ContactDb;
 

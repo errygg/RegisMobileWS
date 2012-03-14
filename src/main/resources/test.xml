@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="windows-1252"?>
-
-<c:Contacts xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-   xmlns:c='http://www.regis.edu/namespaces/contacts'
-   xsi:schemaLocation='http://www.regis.edu/namespaces/contacts contacts.xsd'>
-   <c:contact first_name="John" last_name="Doe"/>
-</c:Contacts>
