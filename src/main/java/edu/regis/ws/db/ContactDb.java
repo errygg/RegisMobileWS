@@ -24,12 +24,18 @@ public class ContactDb {
     	Contact name1 = new Contact();
     	name1.setFirstName("John");
     	name1.setLastName("Doe");
-    	name1.setAddress("100 Nowhere Dr.");
-    	name1.setCity("Nowheresville");
-    	name1.setState("NW");
-    	name1.setZip(00000);
-    	name1.setCell("555-555-5555");
+    	name1.setTitle("Dean");
+    	name1.setEmail("jdoe@nowhere.com");
+    	name1.setBusPhone("555-555-5555");
     	addContact(name1);
+    	
+    	Contact name2 = new Contact();
+    	name2.setFirstName("Jane");
+    	name2.setLastName("Doe");
+    	name2.setTitle("President");
+    	name2.setEmail("jdoe2@nowhere.com");
+    	name2.setBusPhone("444-444-4444");
+    	addContact(name2);
 
     }
 

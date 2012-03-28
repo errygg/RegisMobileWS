@@ -8,15 +8,9 @@ import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.Request;
-import javax.ws.rs.core.UriInfo;
 import javax.xml.bind.JAXBElement;
 
 public class ContactResource {
-
-    @Context private UriInfo uriInfo;
-    @Context private Request request;
     
     private String id; 
     private Contact contact;
@@ -33,7 +27,7 @@ public class ContactResource {
      */
     @GET
     @Produces({"application/xml","application/json"})
-    public Contact getContact() {
+    public synchronized Contact getContact() {
     	return contact;
     }
 
@@ -49,7 +43,7 @@ public class ContactResource {
      */
     @PUT
     @Consumes({"application/xml","application/json"})
-    public JAXBElement<Contact> putContact(JAXBElement<Contact> contact) {
+    public synchronized JAXBElement<Contact> putContact(JAXBElement<Contact> contact) {
         ContactDb.getInstance().updateContact(id, contact.getValue());
         return contact;
     }

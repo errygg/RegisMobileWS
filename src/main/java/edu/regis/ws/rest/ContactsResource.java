@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import javax.xml.bind.JAXBElement;
 
-@Path("contacts")
+@Path(value = "/contacts")
 public class ContactsResource {
 
     @Context private UriInfo uriInfo;
@@ -28,7 +28,7 @@ public class ContactsResource {
      */
 	@GET
     @Produces({"application/xml","application/json"})
-    public Contacts getAll() {
+    public synchronized Contacts getAll() {
         Contacts contacts = new Contacts();
         contacts.getContacts().addAll(ContactDb.getInstance().getContacts());
     	System.out.println("Contacts: " + contacts.getContacts());
@@ -44,7 +44,7 @@ public class ContactsResource {
      */
     @POST
     @Consumes({"application/xml","application/json"})
-    public Response createNewContact(JAXBElement<Contact> contact) {
+    public synchronized Response createNewContact(JAXBElement<Contact> contact) {
         ContactDb.getInstance().addContact(contact.getValue());
         URI contactUri = uriInfo.getAbsolutePathBuilder().
                 path(contact.getValue().getId().toString()).
