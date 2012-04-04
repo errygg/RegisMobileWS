@@ -21,7 +21,8 @@ public class SchoolDb {
 	private SchoolDb() {
 		
 		School school1 = new School();
-		school1.setName("Regis University");
+		school1.setName("School of Computer and Information Sciences");
+		addSchool(school1);
 		
 	}
 	

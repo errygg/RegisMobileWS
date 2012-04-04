@@ -47,6 +47,32 @@ public class ContactDb {
         return contacts.get(id);
     }
     
+    public List<Contact> findByFirstName( String name ) {
+    	
+    	List<Contact> contactList = new ArrayList<Contact>();
+    	for( Map.Entry<String, Contact> entry : contacts.entrySet() ) {
+    		Contact contact = entry.getValue();
+    		if( name.equals(contact.getFirstName()) ) {
+    			contactList.add(contact);
+    		}
+    	}
+
+    	return contactList;
+    }
+    
+    public List<Contact> findByLastName( String name ) {
+    	
+    	List<Contact> contactList = new ArrayList<Contact>();
+    	for( Map.Entry<String, Contact> entry : contacts.entrySet() ) {
+    		Contact contact = entry.getValue();
+    		if( name.equals(contact.getLastName()) ) {
+    			contactList.add(contact);
+    		}
+    	}
+
+    	return contactList;
+    }
+    
     public synchronized void addContact(Contact contact) {
         int id = contactIdx++;
         contacts.put(Integer.toString(id), contact);

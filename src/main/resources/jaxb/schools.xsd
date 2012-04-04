@@ -20,7 +20,7 @@
 	<xs:element name="Schools">
     	<xs:complexType>
 			<xs:sequence>
-				<xs:element name="school" minOccurs="0" maxOccurs="unbounded" type="c:SchoolType"/>
+				<xs:element name="schools" minOccurs="0" maxOccurs="unbounded" type="c:SchoolType"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

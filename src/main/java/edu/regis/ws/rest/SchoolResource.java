@@ -14,51 +14,48 @@ import javax.ws.rs.core.UriInfo;
 import javax.xml.bind.JAXBElement;
 
 public class SchoolResource {
-
-    @Context private UriInfo uriInfo;
-    @Context private Request request;
     
     private String id; 
-    private School contact;
+    private School school;
     
     public SchoolResource(String id) {
         this.id = id;
-        contact = SchoolDb.getInstance().findById(id);
+        school = SchoolDb.getInstance().findById(id);
     }
 
     /**
-     * Get a specific contact object represented by the ID passed in the constructor.
+     * Get a specific school object represented by the ID passed in the constructor.
      *
-     * @return the Contact object that corresponds to the constructor ID.
+     * @return the School object that corresponds to the constructor ID.
      */
     @GET
     @Produces({"application/xml","application/json"})
-    public School getContact() {
-    	return contact;
+    public School getSchool() {
+    	return school;
     }
 
     /**
-     * Update an existing Contact object. Note that the ID in the contact object passed
+     * Update an existing School object. Note that the ID in the school object passed
      * as args must be the same as that which was passed as args in the URL.
      *
-     * To create a Contact object, you must use the POST method in the ContactsResource
+     * To create a School object, you must use the POST method in the SchoolsResource
      * class since creation must be idempotent.
      *
-     * @param contact the contact object to create.
-     * @return the updated Contact object.
+     * @param school the school object to create.
+     * @return the updated School object.
      */
     @PUT
     @Consumes({"application/xml","application/json"})
-    public JAXBElement<School> putContact(JAXBElement<School> contact) {
-        SchoolDb.getInstance().updateSchool(id, contact.getValue());
-        return contact;
+    public JAXBElement<School> putSchool(JAXBElement<School> school) {
+        SchoolDb.getInstance().updateSchool(id, school.getValue());
+        return school;
     }
 
     /**
-     * Remove a contact from the database.
+     * Remove a school from the database.
      */
     @DELETE
-    public void deleteContact() {
+    public void deleteSchool() {
         SchoolDb.getInstance().deleteSchool(id);
     }
 }
