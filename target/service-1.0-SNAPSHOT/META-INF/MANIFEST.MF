@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Class-Path: activation-1.1.jar antlr-2.7.7.jar asm-3.1.jar cglib-2.2.j
+ ar commons-collections-3.2.1.jar commons-logging-1.1.1.jar dom4j-1.6.
+ 1.jar ejb3-persistence-1.0.2.GA.jar hibernate-annotations-3.4.0.GA.ja
+ r hibernate-commons-annotations-3.1.0.GA.jar hibernate-core-3.3.2.GA.
+ jar hibernate-validator-3.1.0.GA.jar jaxb-api-2.0.jar jaxb-impl-2.1.j
+ ar jersey-client-1.0.1.jar jersey-core-1.0.1.jar jersey-json-1.0.1.ja
+ r jersey-server-1.0.1.jar jettison-1.0.1.jar jsr173_api-1.0.jar jsr31
+ 1-api-1.0.jar jta-1.1.jar log4j-1.2.14.jar mysql-connector-java-5.1.9
+ .jar slf4j-api-1.4.2.jar spring-2.5.6.jar stax-api-1.0.1.jar xml-apis
+ -1.0.b2.jar
+

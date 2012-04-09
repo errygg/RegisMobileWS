@@ -1,0 +1,27 @@
+List the contacts (XML Format)
+==========================
+curl -v -X GET -H"Accept: application/xml" http://localhost:9080/rest/contacts
+
+List the contacts (JSON Format)
+==========================
+curl -v -X GET -H"Accept: application/json" http://localhost:9080/rest/contacts
+
+Get a single contacts in XML Format
+==============================
+curl -H "accept: application/xml" localhost:9080/rest/contacts/1
+
+Get a single contact in JSON Format
+==============================
+curl -H "accept: application/json" localhost:9080/rest/contacts/1
+
+Create a new contact
+================
+curl -v -X POST --data-binary "<contact first_name=\"kevin\"/>" -H"Content-Type: application/xml" -H"Accept: application/xml" http://localhost:9080/rest/contacts/
+
+Update a contact
+============
+curl -v -X PUT --data-binary "<contact id=\"2\" first_name=\"kevin\" last_name=\"jones\"/>" -H"Content-Type: application/xml" -H"Accept: application/xml" http://localhost:9080/rest/contacts/2
+
+Delete a contact
+============
+curl -v -X DELETE http://localhost:9080/rest/contacts/2

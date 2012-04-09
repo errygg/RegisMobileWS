@@ -1,5 +1,13 @@
 package edu.regis.ws.models;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SchoolType")
+@XmlRootElement(name = "School")
 public class School {
 	
 	protected Integer id;

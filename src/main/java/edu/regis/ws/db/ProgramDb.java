@@ -3,6 +3,7 @@ package edu.regis.ws.db;
 import edu.regis.ws.models.Program;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +57,11 @@ public class ProgramDb {
 	
 	public synchronized void deleteProgram( String id ) {
 		programs.remove(id);
+	}
+
+	public Collection<? extends Program> findBySchoolId(String schoolId) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
