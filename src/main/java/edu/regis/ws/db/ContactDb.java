@@ -1,6 +1,6 @@
 package edu.regis.ws.db;
 
-import edu.regis.namespaces.contacts.Contact;
+import edu.regis.ws.models.Contact;
 
 import java.util.ArrayList;
 import java.util.HashMap;

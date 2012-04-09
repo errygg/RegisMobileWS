@@ -1,6 +1,6 @@
 package edu.regis.ws.rest;
 
-import edu.regis.namespaces.contacts.Contact;
+import edu.regis.ws.models.Contact;
 import edu.regis.ws.db.ContactDb;
 
 import javax.ws.rs.GET;

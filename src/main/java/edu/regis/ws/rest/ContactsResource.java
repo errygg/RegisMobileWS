@@ -1,6 +1,6 @@
 package edu.regis.ws.rest;
 
-import edu.regis.namespaces.contacts.Contacts;
+import edu.regis.ws.models.Contacts;
 import edu.regis.ws.db.ContactDb;
 
 import javax.ws.rs.GET;
@@ -56,7 +56,7 @@ public class ContactsResource {
      * @return a ContactResource object that processes the request
      */
     @Path("/id/{id}/")
-    public ContactResource getContact(@PathParam("id") String contactid) {
-        return new ContactResource(contactid);
+    public ContactResource getContact(@PathParam("id") String id) {
+        return new ContactResource(id);
     }
 }

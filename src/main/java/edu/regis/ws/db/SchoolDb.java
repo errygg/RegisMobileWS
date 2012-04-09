@@ -1,6 +1,6 @@
 package edu.regis.ws.db;
 
-import edu.regis.namespaces.schools.School;
+import edu.regis.ws.models.School;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +23,10 @@ public class SchoolDb {
 		School school1 = new School();
 		school1.setName("School of Computer and Information Sciences");
 		addSchool(school1);
+		
+		School school2 = new School();
+		school2.setName("School of Management");
+		addSchool(school2);
 		
 	}
 	
