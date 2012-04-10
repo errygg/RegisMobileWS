@@ -3,7 +3,6 @@ package edu.regis.ws.db;
 import edu.regis.ws.models.Program;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,6 +42,20 @@ public class ProgramDb {
 		return programs.get(id);
 	}
 	
+	public List<Program> findBySchoolId( String schoolId ) {
+		
+		Integer i = Integer.parseInt(schoolId);
+		List<Program> programList = new ArrayList<Program>();
+		for( Map.Entry<String, Program> entry : programs.entrySet() ) {
+			Program program = entry.getValue();
+			if( i == program.getSchoolId()) {
+				programList.add(program);
+			}
+		}
+		
+		return programList;
+	}
+	
 	public synchronized void addProgram( Program program ) {
 		
 		int id = programIdx++;
@@ -57,11 +70,6 @@ public class ProgramDb {
 	
 	public synchronized void deleteProgram( String id ) {
 		programs.remove(id);
-	}
-
-	public Collection<? extends Program> findBySchoolId(String schoolId) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }
